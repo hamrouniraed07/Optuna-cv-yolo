@@ -313,3 +313,31 @@ zenml stack register mlflow_stack \
 ```bash
 zenml stack set mlflow_stack
 ```
+
+---
+
+## 11. Captures d'écran
+
+Cette section présente des captures d'écran illustrant les résultats obtenus lors de l'exécution du projet, notamment via l'interface MLflow et les métriques d'entraînement YOLO avec Optuna.
+
+### Capture 1 : Interface MLflow - Vue d'ensemble des expériences
+![Interface MLflow montrant les expériences Optuna et les runs d'entraînement](screenshots/Screenshot%20from%202025-12-25%2017-40-56.png)
+*Figure 1 : Capture de l'interface MLflow à 17h40, affichant les différentes expériences réalisées avec Optuna, incluant les paramètres optimisés (epochs, imgsz) et les métriques associées.*
+
+### Capture 2 : Détails d'un run Optuna
+![Détails d'un run spécifique dans MLflow](screenshots/Screenshot%20from%202025-12-25%2017-42-28.png)
+*Figure 2 : Capture à 17h42 montrant les détails d'un run particulier, avec les courbes de performance (précision, rappel) et les artefacts stockés sur S3.*
+
+### Capture 3 : Métriques de validation et matrices de confusion
+![Métriques de validation et matrice de confusion normalisée](screenshots/Screenshot%20from%202025-12-25%2017-46-19.png)
+*Figure 3 : Capture à 17h46 illustrant les métriques de validation (mAP50, mAP50-95) et la matrice de confusion pour évaluer la performance du modèle YOLO tiny sur le dataset tiny COCO.*
+
+### Capture 4 : Comparaison des résultats Optuna
+![Comparaison des trials Optuna et meilleurs hyperparamètres](screenshots/Screenshot%20from%202025-12-25%2017-46-32.png)
+*Figure 4 : Capture à 17h46 montrant la comparaison des différents trials Optuna, avec les meilleurs hyperparamètres trouvés (ex. : epochs=5, imgsz=320) et l'amélioration des métriques par rapport au baseline.*
+
+### Capture 5 : Résumé des métriques finales
+![Résumé des métriques finales après optimisation](screenshots/image.png)
+*Figure 5 : Capture supplémentaire présentant un résumé consolidé des métriques finales obtenues après l'optimisation Optuna, incluant les scores de précision, rappel et mAP pour le modèle YOLO tiny optimisé.*
+
+Ces captures démontrent l'efficacité de l'optimisation Optuna pour améliorer les performances du modèle YOLO tout en utilisant MLflow pour le tracking et DVC pour le versioning des données.
